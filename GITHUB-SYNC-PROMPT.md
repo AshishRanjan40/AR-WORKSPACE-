@@ -60,7 +60,7 @@ Scratch files, downloads, intermediate renders, pip/npm caches, extracted archiv
 `.gitignore` must include: `.cache/ .local/ .npm/ .venv/ node_modules/ __pycache__/ .pytest_cache/ .mypy_cache/ dist/ build/ out/ target/ .next/ .vite/ .turbo/ coverage/ *.pyc .DS_Store`. Delete `.cache/pip` after any pip install.
 
 ### R6 — GitHub limits (respect them or the push fails).
-- Single file > **100 MB** is rejected by GitHub; > 50 MB gets a warning. Split large videos/zips into < 90 MB parts (`split -b 90m`), or lower the render bitrate. Never try to push a > 100 MB file.
+- Single file > **100 MB** is rejected by GitHub; > 50 MB gets a warning. But MY workspace rule is stricter: no single file inside the workspace may exceed **40 MB**. Render big videos/zips in `/tmp`, split there into < 40 MB parts (`split -b 40m`), and move parts in one at a time. Never try to push a > 100 MB file.
 - If the repo passes ~1 GB total, tell me and propose a second repo (e.g. `REPO-NAME-assets-2`) for new heavy folders.
 
 ### R7 — To show me a heavy file, restore → present → evict.
