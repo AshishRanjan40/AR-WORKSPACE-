@@ -1,0 +1,3 @@
+# Folders that live only on GitHub after push (sync.sh removes them locally).
+# Get one back anytime:  git sparse-checkout add <folder>
+ink-explainer/research/thumbs/
