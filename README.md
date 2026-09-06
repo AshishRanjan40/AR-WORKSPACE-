@@ -6,6 +6,7 @@ Ashish ka Arena workspace backup — har project yahan folder-wise sync hota hai
 |---|---|
 | `channel-cloner/` | SAIDOX Channel Cloner Master Prompt (PDF + SKILL.md + README) |
 | `status.sh` | Workspace usage check (MB + file count) |
+| `ink-explainer/` | Channel Cloner run on @inkexplainer96 — research report, thumbnails, transcript |
 
 Sync: `bash sync.sh "message"` (auto add → commit → push).
 
