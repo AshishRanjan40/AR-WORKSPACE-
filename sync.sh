@@ -18,4 +18,5 @@ git fetch -q --depth=1 origin main && git reflog expire --expire=now --all
 git repack -a -d -q && git prune-packed
 rm -rf .cache/pip
 SZ=$(du -sm --exclude=.cache --exclude=node_modules --exclude=.venv . | cut -f1)
-echo "Workspace now: ${SZ} MB / 128 MB"
+echo "Workspace now: ${SZ} MB (limit 20 · red line 50 · cliff 128)"
+[ "$SZ" -ge 20 ] && echo "🛑 OVER 20 MB — evict heavy folders NOW" || true
